@@ -33,6 +33,7 @@ Console.WriteLine($"Периметр данного прямоугольника
 
 // Task 3
 
+// Рекурсивная функция для чтения данных, введённых пользователем
 void EnterPointsNumber(out uint PointNum)
 {
     Console.WriteLine($"Введите количество вершин многоугольника (от 3 до 5)");
@@ -48,8 +49,10 @@ void EnterPointsNumber(out uint PointNum)
 uint PointNum = 0;
 Console.WriteLine();
 EnterPointsNumber(out PointNum);
+
 Point[] PointArray = new Point[PointNum];
 Console.WriteLine($"Введите координаты {PointNum} точек");
+
 for (uint i = 0; i < PointNum; i++)
 {
     // Считываем значения x и y, записанные через пробел на одной строке
